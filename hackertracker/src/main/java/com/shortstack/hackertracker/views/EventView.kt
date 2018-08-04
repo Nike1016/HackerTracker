@@ -161,15 +161,10 @@ class EventView : FrameLayout {
                 Color.parseColor(type.color)
 //        }
 
-        category.setBackgroundColor(color)
+
+        card.setCardBackgroundColor(color)
+//        category.setBackgroundColor(color)
         progress.progressDrawable.setColorFilter(color, PorterDuff.Mode.SRC_IN)
-
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            val drawable = ContextCompat.getDrawable(context, R.drawable.chip_background)?.mutate()
-            drawable?.setTint(color)
-            category_text.background = drawable
-        }
 
 
 
@@ -184,11 +179,7 @@ class EventView : FrameLayout {
             R.drawable.ic_star_border_white_24dp
         }
 
-        val image = ContextCompat.getDrawable(context, drawable)?.mutate()
-
-        if (isBookmarked && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            image?.setTint(color)
-        }
+        val image = ContextCompat.getDrawable(context, drawable)
 
         star_bar.setImageDrawable(image)
     }

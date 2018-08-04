@@ -11,6 +11,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         tools:layout_marginBottom="20dp"
         tools:layout_marginTop="20dp" />
 
